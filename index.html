@@ -174,7 +174,7 @@
                     name: "Warspite",
                     variants: [
                         {
-                            name: "Warspite - Cannot be Apexed.",
+                            name: "Warspite",
                             data: {
                                 base: { hp: 0, buffs: [] },
                                 apex5: { hp: 0, buffs: [""] },
@@ -193,7 +193,7 @@
                         {
                             name: "Solar Whale",
                             data: {
-                                base: { hp: 329430, buffs: [] },
+                                base: { hp: 0, buffs: [] },
                                 apex5: { hp: 0, buffs: [""] },
                                 apex10: { hp: 0, buffs: [""] },
                                 apex15: { hp: 0, buffs: [""] },
@@ -209,7 +209,7 @@
                             name: "CV3000",
                             data: {
                                 base: { hp: 278340, buffs: [] },
-                                apex5: { hp: +32515, buffs: ["Warp speed +50, Sympathetic Detonation at A7"] },
+                                apex5: { hp: 32515, buffs: [""] },
                                 apex10: { hp: 0, buffs: [""] },
                                 apex15: { hp: 0, buffs: [""] },
                                 apex20: { hp: 0, buffs: [""] }
@@ -224,7 +224,7 @@
                             name: "Marshall Crux",
                             data: {
                                 base: { hp: 0, buffs: [] },
-                                apex5: { hp: 32515, buffs: ["Warp speed +50, Airborne Weapon Maintenance at A7"] },
+                                apex5: { hp: 0, buffs: [""] },
                                 apex10: { hp: 0, buffs: [""] },
                                 apex15: { hp: 0, buffs: [""] },
                                 apex20: { hp: 0, buffs: [""] }
@@ -2100,11 +2100,16 @@
                 
                 let html = `<div class="variant-name">${variant.name}</div>`;
                 
+                // Get base HP
+                const baseHP = variant.data.base.hp;
+                
                 // Base Model
                 html += `
                     <div class="apex-row">
                         <div class="apex-level">Base Model</div>
-                        <div class="apex-benefits">Standard configuration</div>
+                        <div class="apex-benefits">
+                            <div>${typeof baseHP === 'number' ? baseHP.toLocaleString() : baseHP} HP</div>
+                        </div>
                     </div>
                 `;
                 
@@ -2112,12 +2117,14 @@
                 ['apex5', 'apex10', 'apex15', 'apex20'].forEach(level => {
                     const levelNum = level.replace('apex', '');
                     const data = variant.data[level];
+                    const hpIncrease = typeof data.hp === 'number' ? data.hp : 0;
+                    const totalHP = (typeof baseHP === 'number' ? baseHP : 0) + hpIncrease;
                     
                     html += `
                         <div class="apex-row">
                             <div class="apex-level">Apex ${levelNum}</div>
                             <div class="apex-benefits">
-                                <div>+${typeof data.hp === 'number' ? data.hp.toLocaleString() : data.hp} HP</div>
+                                <div>+${hpIncrease.toLocaleString()} HP (Total: ${totalHP.toLocaleString()} HP)</div>
                                 ${data.buffs.filter(b => b).map(buff => `<div>${buff}</div>`).join('')}
                             </div>
                         </div>
