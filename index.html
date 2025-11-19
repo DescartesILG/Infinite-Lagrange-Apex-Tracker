@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinite Lagrange Apex Tracker</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f5f5;
+            display: flex;
+            min-height: 100vh;
+        }
+        
+        .sidebar {
+            width: 250px;
+            background: #2b2b2b;
+            padding: 20px;
+            color: white;
+        }
+        
+        h1 {
+            font-size: 20px;
+            margin-bottom: 25px;
+            color: #fff;
+        }
+        
+        .filter-section {
+            margin-bottom: 25px;
+        }
+        
+        label {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #bbb;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        select {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            border: none;
+            border-radius: 4px;
+            background: #3a3a3a;
+            color: white;
+            cursor: pointer;
+        }
+        
+        select:focus {
+            outline: 2px solid #5a9fd4;
+        }
+        
+        option {
+            background: #3a3a3a;
+            color: white;
+        }
+        
+        .content {
+            flex: 1;
+            padding: 40px;
+            background: white;
+        }
+        
+        .placeholder {
+            text-align: center;
+            color: #999;
+            padding: 100px 20px;
+        }
+        
+        .variants-container {
+            display: none;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .variants-container.active {
+            display: flex;
+        }
+        
+        .variant-card {
+            background: #f9f9f9;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            padding: 20px;
+            min-width: 320px;
+            flex: 1;
+        }
+        
+        .variant-name {
+            font-size: 18px;
+            font-weight: 700;
+            color: #2b2b2b;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #5a9fd4;
+            padding-bottom: 8px;
+        }
+        
+        .apex-row {
+            padding: 10px 0;
+            border-bottom: 1px solid #e8e8e8;
+        }
+        
+        .apex-row:last-child {
+            border-bottom: none;
+        }
+        
+        .apex-level {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        
+        .apex-benefits {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.5;
+        }
+        
+        .apex-benefits div {
+            margin-top: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h1>Infinite Lagrange<br>Apex Tracker</h1>
+        
+        <div class="filter-section">
+            <label for="classSelect">Ship Class</label>
+            <select id="classSelect">
+                <option value="">-- Select Class --</option>
+                <option value="battleship">Battleship</option>
+                <option value="carrier">Carrier</option>
+                <option value="battlecruiser">Battlecruiser</option>
+                <option value="auxiliary">Auxiliary Ship</option>
+                <option value="cruiser">Cruiser</option>
+                <option value="destroyer">Destroyer</option>
+                <option value="frigate">Frigate</option>
+                <option value="corvette">Corvette</option>
+                <option value="aircraft">Aircraft</option>
+            </select>
+        </div>
+        
+        <div class="filter-section">
+            <label for="shipSelect">Ship</label>
+            <select id="shipSelect" disabled>
+                <option value="">-- Select Ship --</option>
+            </select>
+        </div>
+    </div>
+    
+    <div class="content">
+        <div id="placeholder" class="placeholder">
+            <h2>Select a ship class and ship to view Apex data</h2>
+        </div>
+        
+        <div id="variantsContainer" class="variants-container"></div>
+    </div>
+    
+    <script>
+        // Ship data organized by class
+        const unknownData = {
+            base: { hp: "Unknown", buffs: [] },
+            apex5: { hp: "Unknown", buffs: ["Unknown"] },
+            apex10: { hp: "Unknown", buffs: ["Unknown"] },
+            apex15: { hp: "Unknown", buffs: ["Unknown"] },
+            apex20: { hp: "Unknown", buffs: ["Unknown"] }
+        };
+
+        function createVariants(shipName, count) {
+            const variants = [];
+            if (count === 1) {
+                variants.push({ name: shipName, data: unknownData });
+            } else {
+                for (let i = 0; i < count; i++) {
+                    const letter = String.fromCharCode(65 + i);
+                    variants.push({ name: `${shipName} ${letter}`, data: unknownData });
+                }
+            }
+            return variants;
+        }
+
+        const shipData = {
+            battleship: {
+                warspite: { name: "Warspite", variants: createVariants("Warspite", 1) }
+            },
+            carrier: {
+                solar_whale: { name: "Solar Whale", variants: createVariants("Solar Whale", 1) },
+                cv3000: { name: "CV3000", variants: createVariants("CV3000", 1) },
+                marshall_crux: { name: "Marshall Crux", variants: createVariants("Marshall Crux", 1) },
+                eternal_heavens: { name: "Eternal Heavens", variants: createVariants("Eternal Heavens", 1) }
+            },
+            battlecruiser: {
+                antonios_swordbearer: { name: "Antonios Swordbearer", variants: createVariants("Antonios Swordbearer", 1) },
+                st59: { name: "ST59", variants: createVariants("ST59", 1) },
+                thunderbolt_star: { name: "Thunderbolt Star", variants: createVariants("Thunderbolt Star", 1) },
+                shield_of_plutus: { name: "Shield of Plutus", variants: createVariants("Shield of Plutus", 1) },
+                spear_of_uranus: { name: "Spear of Uranus", variants: createVariants("Spear of Uranus", 1) },
+                constantine_the_great: { name: "Constantine the Great", variants: createVariants("Constantine the Great", 1) },
+                eternal_storm: { name: "Eternal Storm", variants: createVariants("Eternal Storm", 1) }
+            },
+            auxiliary: {
+                ediacaran: { name: "Ediacaran", variants: createVariants("Ediacaran", 1) },
+                fsv830: { name: "FSV830", variants: createVariants("FSV830", 1) }
+            },
+            cruiser: {
+                conamara_chaos: { name: "Conamara Chaos", variants: createVariants("Conamara Chaos", 2) },
+                predator: { name: "Predator", variants: createVariants("Predator", 3) },
+                jaeger: { name: "Jaeger", variants: createVariants("Jaeger", 2) },
+                light_cone: { name: "Light Cone", variants: createVariants("Light Cone", 3) },
+                callisto: { name: "Callisto", variants: createVariants("Callisto", 3) },
+                ranger: { name: "Ranger", variants: createVariants("Ranger", 2) },
+                chimera: { name: "Chimera", variants: createVariants("Chimera", 3) },
+                io: { name: "Io", variants: createVariants("Io", 3) },
+                cas066: { name: "CAS066", variants: createVariants("CAS066", 4) },
+                kccpv2_0: { name: "KCCPV2.0", variants: createVariants("KCCPV2.0", 4) }
+            },
+            destroyer: {
+                taurus: { name: "Taurus", variants: createVariants("Taurus", 3) },
+                ceres: { name: "Ceres", variants: createVariants("Ceres", 3) },
+                ac720: { name: "AC720", variants: createVariants("AC720", 5) },
+                eris_i: { name: "Eris I", variants: createVariants("Eris I", 3) },
+                aldabra: { name: "Aldabra", variants: createVariants("Aldabra", 3) },
+                vanguard: { name: "Vanguard", variants: createVariants("Vanguard", 2) },
+                guardian: { name: "Guardian", variants: createVariants("Guardian", 3) },
+                tundra: { name: "Tundra", variants: createVariants("Tundra", 2) },
+                thalassa_fluorite: { name: "Thalassa Fluorite", variants: createVariants("Thalassa Fluorite", 2) },
+                quaoar: { name: "Quaoar", variants: createVariants("Quaoar", 2) },
+                winged_hussar: { name: "Winged Hussar", variants: createVariants("Winged Hussar", 3) }
+            },
+            frigate: {
+                reliat: { name: "Reliat", variants: createVariants("Reliat", 3) },
+                carilion: { name: "Carilion", variants: createVariants("Carilion", 3) },
+                fg300: { name: "FG300", variants: createVariants("FG300", 3) },
+                xenostinger: { name: "XenoStinger", variants: createVariants("XenoStinger", 3) },
+                noma_m470: { name: "Noma M470", variants: createVariants("Noma M470", 3) },
+                ruby: { name: "Ruby", variants: createVariants("Ruby", 3) },
+                inostrancevia: { name: "Inostrancevia", variants: createVariants("Inostrancevia", 3) },
+                mare_serenitatis: { name: "Mare Serenitatis", variants: createVariants("Mare Serenitatis", 3) },
+                mare_tranquilitatis: { name: "Mare Tranquilitatis", variants: createVariants("Mare Tranquilitatis", 3) },
+                mare_nubium: { name: "Mare Nubium", variants: createVariants("Mare Nubium", 2) },
+                mare_imbrium: { name: "Mare Imbrium", variants: createVariants("Mare Imbrium", 2) },
+                zircon: { name: "Zircon", variants: createVariants("Zircon", 2) }
+            },
+            corvette: {
+                nebula_chaser: { name: "Nebula Chaser", variants: createVariants("Nebula Chaser", 2) },
+                cvt800: { name: "CVT800", variants: createVariants("CVT800", 1) },
+                cellular_defender: { name: "Cellular Defender", variants: createVariants("Cellular Defender", 1) },
+                tempel_i: { name: "Tempel I", variants: createVariants("Tempel I", 2) },
+                redbeast_7_13: { name: "RedBeast 7-13", variants: createVariants("RedBeast 7-13", 2) },
+                cv_ii003: { name: "CV-II003", variants: createVariants("CV-II003", 1) },
+                hale_bopp: { name: "Hale-Bopp", variants: createVariants("Hale-Bopp", 2) },
+                s_levy9: { name: "S-Levy 9", variants: createVariants("S-Levy 9", 1) },
+                cv_m011: { name: "CV-M011", variants: createVariants("CV-M011", 3) },
+                void_elfin: { name: "Void Elfin", variants: createVariants("Void Elfin", 1) },
+                silent_assassin: { name: "Silent Assassin", variants: createVariants("Silent Assassin", 2) }
+            },
+            aircraft: {
+                a101_the_rational: { name: "A101 the Rational", variants: createVariants("A101 the Rational", 1) },
+                sc002: { name: "SC002", variants: createVariants("SC002", 1) },
+                thunderbolt_v022: { name: "Thunderbolt V022", variants: createVariants("Thunderbolt V022", 3) },
+                at021: { name: "AT021", variants: createVariants("AT021", 3) },
+                mistral: { name: "Mistral", variants: createVariants("Mistral", 1) },
+                janbiya: { name: "Janbiya", variants: createVariants("Janbiya", 1) },
+                stingray: { name: "Stingray", variants: createVariants("Stingray", 1) },
+                spore_a404: { name: "Spore A404", variants: createVariants("Spore A404", 1) },
+                balancer_anderson: { name: "Balancer Anderson", variants: createVariants("Balancer Anderson", 1) },
+                hayreddin_loyal: { name: "Hayreddin's Loyal", variants: createVariants("Hayreddin's Loyal", 1) },
+                strix_a100: { name: "Strix A100", variants: createVariants("Strix A100", 1) },
+                bullfrog: { name: "Bullfrog", variants: createVariants("Bullfrog", 1) },
+                sandrake: { name: "Sandrake", variants: createVariants("Sandrake", 1) },
+                br050: { name: "BR050", variants: createVariants("BR050", 3) },
+                b192_newland: { name: "B192 Newland", variants: createVariants("B192 Newland", 1) },
+                vitas_b010: { name: "Vitas-B010", variants: createVariants("Vitas-B010", 1) },
+                vitas_a021: { name: "Vitas A021", variants: createVariants("Vitas A021", 1) }
+            }
+        };
+
+        const classSelect = document.getElementById('classSelect');
+        const shipSelect = document.getElementById('shipSelect');
+        const placeholder = document.getElementById('placeholder');
+        const variantsContainer = document.getElementById('variantsContainer');
+
+        // Populate ship dropdown when class is selected
+        classSelect.addEventListener('change', function() {
+            const selectedClass = this.value;
+            shipSelect.innerHTML = '<option value="">-- Select Ship --</option>';
+            
+            if (selectedClass) {
+                shipSelect.disabled = false;
+                const ships = shipData[selectedClass];
+                
+                for (const shipKey in ships) {
+                    const ship = ships[shipKey];
+                    const option = document.createElement('option');
+                    option.value = shipKey;
+                    option.textContent = ship.name;
+                    shipSelect.appendChild(option);
+                }
+            } else {
+                shipSelect.disabled = true;
+                placeholder.style.display = 'block';
+                variantsContainer.classList.remove('active');
+            }
+            
+            // Reset ship selection
+            shipSelect.value = '';
+            placeholder.style.display = 'block';
+            variantsContainer.classList.remove('active');
+        });
+
+        // Display variants when ship is selected
+        shipSelect.addEventListener('change', function() {
+            const selectedClass = classSelect.value;
+            const selectedShip = this.value;
+            
+            if (selectedShip) {
+                const ship = shipData[selectedClass][selectedShip];
+                displayVariants(ship.variants);
+            } else {
+                placeholder.style.display = 'block';
+                variantsContainer.classList.remove('active');
+            }
+        });
+
+        function displayVariants(variants) {
+            variantsContainer.innerHTML = '';
+            
+            variants.forEach(variant => {
+                const card = document.createElement('div');
+                card.className = 'variant-card';
+                
+                let html = `<div class="variant-name">${variant.name}</div>`;
+                
+                // Base Model
+                html += `
+                    <div class="apex-row">
+                        <div class="apex-level">Base Model</div>
+                        <div class="apex-benefits">Standard configuration</div>
+                    </div>
+                `;
+                
+                // Apex levels
+                ['apex5', 'apex10', 'apex15', 'apex20'].forEach(level => {
+                    const levelNum = level.replace('apex', '');
+                    const data = variant.data[level];
+                    
+                    html += `
+                        <div class="apex-row">
+                            <div class="apex-level">Apex ${levelNum}</div>
+                            <div class="apex-benefits">
+                                <div>+${data.hp.toLocaleString()} HP</div>
+                                ${data.buffs.map(buff => `<div>${buff}</div>`).join('')}
+                            </div>
+                        </div>
+                    `;
+                });
+                
+                card.innerHTML = html;
+                variantsContainer.appendChild(card);
+            });
+            
+            placeholder.style.display = 'none';
+            variantsContainer.classList.add('active');
+        }
+    </script>
+</body>
+</html>
