@@ -1,4 +1,4 @@
-x<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -208,8 +208,8 @@ x<!DOCTYPE html>
                         {
                             name: "CV3000",
                             data: {
-                                base: { hp: 278340, buffs: [] },
-                                apex5: { hp: 32515, buffs: [""] },
+                                base: { hp: 0, buffs: [] },
+                                apex5: { hp: 0, buffs: [""] },
                                 apex10: { hp: 0, buffs: [""] },
                                 apex15: { hp: 0, buffs: [""] },
                                 apex20: { hp: 0, buffs: [""] }
@@ -737,7 +737,7 @@ x<!DOCTYPE html>
                             name: "Taurus A",
                             data: {
                                 base: { hp: 0, buffs: [] },
-                                apex5: { hp: 2745, buffs: ["Warp Speed +50, +2 HP upgrades"] },
+                                apex5: { hp: 0, buffs: [""] },
                                 apex10: { hp: 0, buffs: [""] },
                                 apex15: { hp: 0, buffs: [""] },
                                 apex20: { hp: 0, buffs: [""] }
@@ -747,7 +747,7 @@ x<!DOCTYPE html>
                             name: "Taurus B",
                             data: {
                                 base: { hp: 0, buffs: [] },
-                                apex5: { hp: 2745, buffs: ["Warp Speed +50, +2 HP upgrades"] },
+                                apex5: { hp: 0, buffs: [""] },
                                 apex10: { hp: 0, buffs: [""] },
                                 apex15: { hp: 0, buffs: [""] },
                                 apex20: { hp: 0, buffs: [""] }
@@ -757,7 +757,7 @@ x<!DOCTYPE html>
                             name: "Taurus C",
                             data: {
                                 base: { hp: 0, buffs: [] },
-                                apex5: { hp: 2745, buffs: ["Warp Speed +50, +2 HP upgrades"] },
+                                apex5: { hp: 0, buffs: [""] },
                                 apex10: { hp: 0, buffs: [""] },
                                 apex15: { hp: 0, buffs: [""] },
                                 apex20: { hp: 0, buffs: [""] }
@@ -861,38 +861,33 @@ x<!DOCTYPE html>
                         {
                             name: "Eris I A",
                             data: {
-                                base: { hp: 30540, buffs: [N/A] },
-                                apex3: { hp: 1115, buffs: ["+1 Hp Upgrade - Total: 1"] },
-                                apex5: { hp: 2325, buffs: ["Warp Speed +50", +1 Hp Upgrade - Total: 2"] },
-                                apex8: { hp: 3720, buffs: ["Warp Speed +50", +1 Hp Upgrade - Total: 3"] },
-                                apex10: { hp: 4650, buffs: ["Warp Speed +50", +1 Hp Upgrade - Total: 3, Cruising Speed +10, "] },
-                                apex13: { hp: 5480, buffs: ["Warp Speed +50", +1 Hp Upgrade - Total: 4"] },
+                                base: { hp: 0, buffs: [""] },
+                                apex3: { hp: 0, buffs: [""] },
+                                apex5: { hp: 0, buffs: [""] },
+                                apex8: { hp: 0, buffs: [""] },
+                                apex10: { hp: 0, buffs: [""] },
+                                apex12: { hp: 0, buffs: [""] },
+                                apex15: { hp: 0, buffs: [""] },
+                                apex18: { hp: 0, buffs: [""] },
+                                apex20: { hp: 0, buffs: [""] }
+                            }
+                        },
+                        {
+                            name: "Eris I B",
+                            data: {
+                                base: { hp: 0, buffs: [] },
+                                apex5: { hp: 0, buffs: [""] },
+                                apex10: { hp: 0, buffs: [""] },
                                 apex15: { hp: 0, buffs: [""] },
                                 apex20: { hp: 0, buffs: [""] }
                             }
                         },
                         {
-                            name: "Eris I A",
+                            name: "Eris I C",
                             data: {
-                                base: { hp: 30540, buffs: [] },
-                                apex3: { hp: , buffs: [""] },
-                                apex5: { hp: 0, buffs: ["Warp Speed +50"] },
-                                apex8: { hp: 4650, buffs: [""] },
-                                apex10: { hp: 4650, buffs: [""] },
-                                apex12: { hp: 4650, buffs: [""] },
-                                apex15: { hp: 0, buffs: [""] },
-                                apex20: { hp: 0, buffs: [""] }
-                            }
-                        },
-                        {
-                            name: "Eris I A",
-                            data: {
-                                base: { hp: 30540, buffs: [] },
-                                apex3: { hp: , buffs: [""] },
-                                apex5: { hp: 0, buffs: ["Warp Speed +50"] },
-                                apex8: { hp: 4650, buffs: [""] },
-                                apex10: { hp: 4650, buffs: [""] },
-                                apex12: { hp: 4650, buffs: [""] },
+                                base: { hp: 0, buffs: [] },
+                                apex5: { hp: 0, buffs: [""] },
+                                apex10: { hp: 0, buffs: [""] },
                                 apex15: { hp: 0, buffs: [""] },
                                 apex20: { hp: 0, buffs: [""] }
                             }
@@ -2121,6 +2116,7 @@ x<!DOCTYPE html>
                         </div>
                     </div>
                 `;
+                
                 // Apex levels - check all possible apex levels from 1-20
                 const apexLevels = [];
                 for (let i = 1; i <= 20; i++) {
@@ -2128,12 +2124,12 @@ x<!DOCTYPE html>
                         apexLevels.push(i);
                     }
                 }
-
+                
                 apexLevels.forEach(levelNum => {
                     const data = variant.data[`apex${levelNum}`];
                     const hpIncrease = typeof data.hp === 'number' ? data.hp : 0;
                     const totalHP = (typeof baseHP === 'number' ? baseHP : 0) + hpIncrease;
-    
+                    
                     html += `
                         <div class="apex-row">
                             <div class="apex-level">Apex ${levelNum}</div>
