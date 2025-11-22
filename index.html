@@ -2121,14 +2121,19 @@ x<!DOCTYPE html>
                         </div>
                     </div>
                 `;
-                
-                // Apex levels
-                ['apex5', 'apex10', 'apex15', 'apex20'].forEach(level => {
-                    const levelNum = level.replace('apex', '');
-                    const data = variant.data[level];
+                // Apex levels - check all possible apex levels from 1-20
+                const apexLevels = [];
+                for (let i = 1; i <= 20; i++) {
+                    if (variant.data[`apex${i}`]) {
+                        apexLevels.push(i);
+                    }
+                }
+
+                apexLevels.forEach(levelNum => {
+                    const data = variant.data[`apex${levelNum}`];
                     const hpIncrease = typeof data.hp === 'number' ? data.hp : 0;
                     const totalHP = (typeof baseHP === 'number' ? baseHP : 0) + hpIncrease;
-                    
+    
                     html += `
                         <div class="apex-row">
                             <div class="apex-level">Apex ${levelNum}</div>
