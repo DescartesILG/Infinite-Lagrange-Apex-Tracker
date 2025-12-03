@@ -319,11 +319,21 @@
                         {
                             name: "Shield of Plutus",
                             data: {
-                                base: { hp: 0, buffs: [] },
-                                apex5: { hp: 0, buffs: [""] },
-                                apex10: { hp: 0, buffs: [""] },
-                                apex15: { hp: 0, buffs: [""] },
-                                apex20: { hp: 0, buffs: [""] }
+                                base: { hp: 0, buffs: ["No Upgrades, V1.00"] },
+                                apex5: { hp: 21695, buffs: ["Warp +50"] },
+                                apex6: { hp: 25665, buffs: ["B1 +2% Repair, B2 +3% Crit Reduction, B3 +1% Dmg"]},
+                                apex7: { hp: 29630, buffs: ["A1 +1% UAV Dmg, A2/A3 +3% Support Duration"]},
+                                apex9: { hp: 37565, buffs: ["C1 +15 ATK, C2 6% for 12% crit, C3 +25 ATK"]},
+                                apex10: { hp: 44385, buffs: ["Cruise +10, M1 +19 ATK Pri Wep and +6 ATK Sec Wep, M2 +10 ATK, M3 +21 ATK"] },
+                                apex11: { hp: 48355, buffs: ["B1 +2% Repair (4% Total), B2 +3% Crit Reduction (6% Total) , B3 +1% Dmg (2% Total)"]},
+                                apex12: { hp: 52320, buffs: ["A1 +1% UAV Dmg (2% Total), A2/A3 +3% Support Duration (+6% Total)"]},
+                                apex14: { hp: 60255, buffs: ["C1 +15 ATK (+30 Total), C2 6% for 12% crit (12% for 24%), C3 +25 ATK (+50 Total)"] },
+                                apex15: { hp: 67075, buffs: ["Warp +50 (total +100), M1 +19 ATK Pri Wep and +6 ATK Sec Wep (+38 and +12 Total), M2 +10 ATK (+20 Total), M3 +21 ATK (+42 Total)"] },
+                                apex16: { hp: 71045, buffs: ["B1 +2% Repair (6% Total), B2 +3% Crit Reduction (9% Total) , B3 +1% Dmg (3% Total)"] },
+                                apex17: { hp: 75010, buffs: ["A1 +1% UAV Dmg (3% Total), A2/A3 +3% Support Duration (+9% Total)"] },
+                                apex19: { hp: 82945, buffs: ["C1 +15 ATK (+45 Total), C2 6% for 12% crit (18% for 36%), C3 +25 ATK (+75 Total)"] },
+                                apex20: { hp: 91025, buffs: ["Cruise +10 (total +20), M1 +19 ATK Pri Wep and +6 ATK Sec Wep (+57 and +18 Total), M2 +10 ATK (+30 Total), M3 +21 ATK (+63 Total)"] }
+
                             }
                         }
                     ]
@@ -429,23 +439,31 @@
                     name: "Conamara Chaos",
                     variants: [
                         {
-                            name: "Conamara Chaos A",
+                            name: "Conamara Chaos A - Railgun Type",
                             data: {
-                                base: { hp: 0, buffs: [] },
-                                apex5: { hp: 0, buffs: [""] },
-                                apex10: { hp: 0, buffs: [""] },
-                                apex15: { hp: 0, buffs: [""] },
-                                apex20: { hp: 0, buffs: [""] }
+                                base: { hp: 32310, buffs: [] },
+                                apex3: { hp: 2940, buffs: ["+1 Hp Upgrade - Total: 1"] },
+                                apex5: { hp: 5450, buffs: ["Warp +50, +1 Hp Upgrade - Total: 2"] },
+                                apex8: { hp: 8390, buffs: ["Warp +50, +1 Hp Upgrade - Total: 3"] },
+                                apex10: { hp: 10895, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 3, Main Wep +37 ATK, Sec Wep 6% chance for 12% crit"] },
+                                apex13: { hp: 13835, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 4, Main Wep +37 ATK, Sec Wep 6% chance for 12% crit"] },
+                                apex15: { hp: 16435, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 3, Main Wep +37 ATK (+74 Total), Sec Wep 6% chance for 12% crit (12% for 24% total)"] },
+                                apex18: { hp: 19400, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 5, Main Wep +37 ATK (+74 Total), Sec Wep 6% chance for 12% crit (12% for 24% total)"] },
+                                apex20: { hp: 22035, buffs: ["Warp +100, Cruise +20, +1 Hp Upgrade - Total: 5, Main Wep +37 ATK (+111 Total), Sec Wep 6% chance for 12% crit (18% for 36% total)"] }
                             }
                         },
                         {
-                            name: "Conamara Chaos B",
+                            name: "Conamara Chaos B - Plasma Type",
                             data: {
-                                base: { hp: 0, buffs: [] },
-                                apex5: { hp: 0, buffs: [""] },
-                                apex10: { hp: 0, buffs: [""] },
-                                apex15: { hp: 0, buffs: [""] },
-                                apex20: { hp: 0, buffs: [""] }
+                                base: { hp: 32310, buffs: [] },
+                                apex3: { hp: 2940, buffs: ["+1 Hp Upgrade - Total: 1"] },
+                                apex5: { hp: 5450, buffs: ["Warp +50, +1 Hp Upgrade - Total: 2"] },
+                                apex8: { hp: 8390, buffs: ["Warp +50, +1 Hp Upgrade - Total: 3"] },
+                                apex10: { hp: 10895, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 3, Main Wep +2% Dmg, Sec Wep 6% chance for 12% crit"] },
+                                apex13: { hp: 13835, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 4, Main Wep +2% Dmg, Sec Wep 6% chance for 12% crit"] },
+                                apex15: { hp: 16435, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 3, Main Wep +2% Dmg (4% Total), Sec Wep 6% chance for 12% crit (12% for 24% total)"] },
+                                apex18: { hp: 19400, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 5, Main Wep +2% Dmg (4% Total), Sec Wep 6% chance for 12% crit (12% for 24% total)"] },
+                                apex20: { hp: 22035, buffs: ["Warp +100, Cruise +20, +1 Hp Upgrade - Total: 5, Main Wep +2% Dmg (6% Total), Sec Wep 6% chance for 12% crit (18% for 36% total)"] }
                             }
                         }
                     ]
@@ -454,33 +472,45 @@
                     name: "Predator",
                     variants: [
                         {
-                            name: "Predator A",
+                            name: "Predator A - Generic Type",
                             data: {
-                                base: { hp: 0, buffs: [] },
-                                apex5: { hp: 0, buffs: [""] },
-                                apex10: { hp: 0, buffs: [""] },
-                                apex15: { hp: 0, buffs: [""] },
-                                apex20: { hp: 0, buffs: [""] }
+                                base: { hp: 32310, buffs: [] },
+                                apex3: { hp: 3130, buffs: ["+1 Hp Upgrade - Total: 1"] },
+                                apex5: { hp: 5800, buffs: ["Warp +50, +1 Hp Upgrade - Total: 2"] },
+                                apex8: { hp: 8925, buffs: ["Warp +50, +1 Hp Upgrade - Total: 3"] },
+                                apex10: { hp: 11595, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 3, +2% Hanger Damage, Main Wep 6% chance for 12% crit, Sec Wep 6% chance for 12% crit"] },
+                                apex13: { hp: 14720, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 4, +2% Hanger Damage, Main Wep 6% chance for 12% crit, Sec Wep 6% chance for 12% crit"] },
+                                apex15: { hp: 17520, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 3, +2% Hanger Damage (4% Total), Main Wep 6% chance for 12% crit (12% for 24% total), Sec Wep 6% chance for 12% crit (12% for 24% total)"] },
+                                apex18: { hp: 20645, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 5, +2% Hanger Damage (4% Total), Main Wep 6% chance for 12% crit (12% for 24% total), Sec Wep 6% chance for 12% crit (12% for 24% total)"] },
+                                apex20: { hp: 23445, buffs: ["Warp +100, Cruise +20, +1 Hp Upgrade - Total: 5, +2% Hanger Damage (6% Total), Main Wep 6% chance for 12% crit (18% for 36% total), Sec Wep 6% chance for 12% crit (18% for 36% total)"] }
                             }
                         },
                         {
-                            name: "Predator B",
+                            name: "Predator B - Tactical Type",
                             data: {
-                                base: { hp: 0, buffs: [] },
-                                apex5: { hp: 0, buffs: [""] },
-                                apex10: { hp: 0, buffs: [""] },
-                                apex15: { hp: 0, buffs: [""] },
-                                apex20: { hp: 0, buffs: [""] }
+                                base: { hp: 32310, buffs: [] },
+                                apex3: { hp: 3130, buffs: ["+1 Hp Upgrade - Total: 1"] },
+                                apex5: { hp: 5800, buffs: ["Warp +50, +1 Hp Upgrade - Total: 2"] },
+                                apex8: { hp: 8925, buffs: ["Warp +50, +1 Hp Upgrade - Total: 3"] },
+                                apex10: { hp: 11595, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 3, +2% Hanger Damage, Main Wep 6% chance for 12% crit"] },
+                                apex13: { hp: 14720, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 4, +2% Hanger Damage, Main Wep 6% chance for 12% crit"] },
+                                apex15: { hp: 17520, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 3, +2% Hanger Damage (4% Total), Main Wep 6% chance for 12% crit (12% for 24% total)"] },
+                                apex18: { hp: 20645, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 5, +2% Hanger Damage (4% Total), Main Wep 6% chance for 12% crit (12% for 24% total)"] },
+                                apex20: { hp: 23445, buffs: ["Warp +100, Cruise +20, +1 Hp Upgrade - Total: 5, +2% Hanger Damage (6% Total), Main Wep 6% chance for 12% crit (18% for 36% total)"] }
                             }
                         },
                         {
-                            name: "Predator C",
+                            name: "Predator C - Anti-Aircraft Type",
                             data: {
-                                base: { hp: 0, buffs: [] },
-                                apex5: { hp: 0, buffs: [""] },
-                                apex10: { hp: 0, buffs: [""] },
-                                apex15: { hp: 0, buffs: [""] },
-                                apex20: { hp: 0, buffs: [""] }
+                                base: { hp: 32310, buffs: [] },
+                                apex3: { hp: 3130, buffs: ["+1 Hp Upgrade - Total: 1"] },
+                                apex5: { hp: 5800, buffs: ["Warp +50, +1 Hp Upgrade - Total: 2"] },
+                                apex8: { hp: 8925, buffs: ["Warp +50, +1 Hp Upgrade - Total: 3"] },
+                                apex10: { hp: 11595, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 3, +2% Hanger Damage, Main Wep 6% chance for 12% crit, Sec Wep 6% chance for 12% crit"] },
+                                apex13: { hp: 14720, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 4, +2% Hanger Damage, Main Wep 6% chance for 12% crit, Sec Wep 6% chance for 12% crit"] },
+                                apex15: { hp: 17520, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 3, +2% Hanger Damage (4% Total), Main Wep 6% chance for 12% crit (12% for 24% total), Sec Wep 6% chance for 12% crit (12% for 24% total)"] },
+                                apex18: { hp: 20645, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 5, +2% Hanger Damage (4% Total), Main Wep 6% chance for 12% crit (12% for 24% total), Sec Wep 6% chance for 12% crit (12% for 24% total)"] },
+                                apex20: { hp: 23445, buffs: ["Warp +100, Cruise +20, +1 Hp Upgrade - Total: 5, +2% Hanger Damage (6% Total), Main Wep 6% chance for 12% crit (18% for 36% total), Sec Wep 6% chance for 12% crit (18% for 36% total)"] }
                             }
                         }
                     ]
@@ -514,41 +544,45 @@
                     name: "Light Cone",
                     variants: [
                         {
-                            name: "Light Cone A",
+                            name: "Light Cone A - Generic Type",
                             data: {
                                 base: { hp: 32310, buffs: [] },
-                                apex3: { hp: 1615, buffs: ["+1 Hp Upgrade - Total: 1"] },
-                                apex5: { hp: 2695, buffs: ["Warp +50, +1 Hp Upgrade - Total: 2"] },
-                                apex8: { hp: 4315, buffs: ["Warp +50, +1 Hp Upgrade - Total: 3"] },
-                                apex10: { hp: 5390, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 3, Hanger 6% chance for 12% crit, Main Wep 6% chance for 12% crit"] },
-                                apex13: { hp: 7010, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 4, Hanger 6% chance for 12% crit, Main Wep 6% chance for 12% crit"] },
-                                apex15: { hp: 8090, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 3, Hanger 6% chance for 12% crit (12% for 24% total), Main Wep 6% chance for 12% crit (12% for 24% total)"] },
-                                apex18: { hp: 9705, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 5, Hanger 6% chance for 12% crit (12% for 24% total), Main Wep 6% chance for 12% crit (12% for 24% total)"] },
-                                apex20: { hp: 10785, buffs: ["Warp +100, Cruise +20, +1 Hp Upgrade - Total: 5, Hanger 6% chance for 12% crit (18% for 36% total), Main Wep 6% chance for 12% crit (18% for 36% total)"] }
+                                apex3: { hp: 2860, buffs: ["+1 Hp Upgrade - Total: 1"] },
+                                apex5: { hp: 5295, buffs: ["Warp +50, +1 Hp Upgrade - Total: 2"] },
+                                apex8: { hp: 8150, buffs: ["Warp +50, +1 Hp Upgrade - Total: 3"] },
+                                apex10: { hp: 10590, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 3, Main Wep 6% chance for 12% crit, Sec Wep 6% chance for 12% crit, UAV 6% chance for 12% crit"] },
+                                apex13: { hp: 13445, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 4, Main Wep 6% chance for 12% crit, Sec Wep 6% chance for 12% crit, UAV 6% chance for 12% crit"] },
+                                apex15: { hp: 16000, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 3, Main Wep 6% chance for 12% crit (12% for 24% total), Sec Wep 6% chance for 12% crit (12% for 24% total), UAV 6% chance for 12% crit (12% for 24% total)"] },
+                                apex18: { hp: 18855, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 5, Main Wep 6% chance for 12% crit (12% for 24% total), Sec Wep 6% chance for 12% crit (12% for 24% total), UAV 6% chance for 12% crit (12% for 24% total)"] },
+                                apex20: { hp: 21410, buffs: ["Warp +100, Cruise +20, +1 Hp Upgrade - Total: 5, Main Wep 6% chance for 12% crit (18% for 36% total), Sec Wep 6% chance for 12% crit (18% for 36% total), UAV 6% chance for 12% crit (18% for 36% total)"] }
                             }
                         },
                         {
-                            name: "Light Cone B",
+                            name: "Light Cone B - Anti-Aircraft Type",
                             data: {
                                 base: { hp: 32310, buffs: [] },
-                                apex3: { hp: 1615, buffs: ["+1 Hp Upgrade - Total: 1"] },
-                                apex5: { hp: 2695, buffs: ["Warp +50, +1 Hp Upgrade - Total: 2"] },
-                                apex8: { hp: 4315, buffs: ["Warp +50, +1 Hp Upgrade - Total: 3"] },
-                                apex10: { hp: 5390, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 3, Main Wep 6% chance for 12% crit, Sec Wep 6% chance for 12% crit"] },
-                                apex13: { hp: 7010, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 4, Main Wep 6% chance for 12% crit, Sec Wep 6% chance for 12% crit"] },
-                                apex15: { hp: 8090, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 3, Main Wep 6% chance for 12% crit (12% for 24% total), Sec Wep 6% chance for 12% crit (12% for 24% total)"] },
-                                apex18: { hp: 9705, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 5, Main Wep 6% chance for 12% crit (12% for 24% total), Sec Wep 6% chance for 12% crit (12% for 24% total)"] },
-                                apex20: { hp: 10785, buffs: ["Warp +100, Cruise +20, +1 Hp Upgrade - Total: 5, Main Wep 6% chance for 12% crit (18% for 36% total), Sec Wep 6% chance for 12% crit (18% for 36% total)"] }
+                                apex3: { hp: 2860, buffs: ["+1 Hp Upgrade - Total: 1"] },
+                                apex5: { hp: 5295, buffs: ["Warp +50, +1 Hp Upgrade - Total: 2"] },
+                                apex8: { hp: 8150, buffs: ["Warp +50, +1 Hp Upgrade - Total: 3"] },
+                                apex10: { hp: 10590, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 3, Main Wep 6% chance for 12% crit, Sec Wep 6% chance for 12% crit, UAV 6% chance for 12% crit"] },
+                                apex13: { hp: 13445, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 4, Main Wep 6% chance for 12% crit, Sec Wep 6% chance for 12% crit, UAV 6% chance for 12% crit"] },
+                                apex15: { hp: 16000, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 3, Main Wep 6% chance for 12% crit (12% for 24% total), Sec Wep 6% chance for 12% crit (12% for 24% total), UAV 6% chance for 12% crit (12% for 24% total)"] },
+                                apex18: { hp: 18855, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 5, Main Wep 6% chance for 12% crit (12% for 24% total), Sec Wep 6% chance for 12% crit (12% for 24% total), UAV6% chance for 12% crit (12% for 24% total)"] },
+                                apex20: { hp: 21410, buffs: ["Warp +100, Cruise +20, +1 Hp Upgrade - Total: 5, Main Wep 6% chance for 12% crit (18% for 36% total), Sec Wep 6% chance for 12% crit (18% for 36% total), UAV 6% chance for 12% crit (18% for 36% total)"] }
                             }
                         },
                         {
-                            name: "Light Cone C",
+                            name: "Light Cone C - Assault Type",
                             data: {
-                                base: { hp: 0, buffs: [] },
-                                apex5: { hp: 0, buffs: [""] },
-                                apex10: { hp: 0, buffs: [""] },
-                                apex15: { hp: 0, buffs: [""] },
-                                apex20: { hp: 0, buffs: [""] }
+                                base: { hp: 32310, buffs: [] },
+                                apex3: { hp: 2860, buffs: ["+1 Hp Upgrade - Total: 1"] },
+                                apex5: { hp: 5295, buffs: ["Warp +50, +1 Hp Upgrade - Total: 2"] },
+                                apex8: { hp: 8150, buffs: ["Warp +50, +1 Hp Upgrade - Total: 3"] },
+                                apex10: { hp: 10590, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 3, Main Wep 6% chance for 12% crit, Sec Wep 6% chance for 12% crit"] },
+                                apex13: { hp: 13445, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 4, Main Wep 6% chance for 12% crit, Sec Wep 6% chance for 12% crit"] },
+                                apex15: { hp: 16000, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 3, Main Wep 6% chance for 12% crit (12% for 24% total), Sec Wep 6% chance for 12% crit (12% for 24% total)"] },
+                                apex18: { hp: 18855, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 5, Main Wep 6% chance for 12% crit (12% for 24% total), Sec Wep 6% chance for 12% crit (12% for 24% total)"] },
+                                apex20: { hp: 21410, buffs: ["Warp +100, Cruise +20, +1 Hp Upgrade - Total: 5, Main Wep 6% chance for 12% crit (18% for 36% total), Sec Wep 6% chance for 12% crit (18% for 36% total)"] }
                             }
                         }
                     ]
@@ -1173,33 +1207,46 @@
                     name: "Winged Hussar",
                     variants: [
                         {
-                            name: "Winged Hussar A",
+                            name: "Winged Hussar A - Anti-Ship Type",
                             data: {
-                                base: { hp: 0, buffs: [] },
-                                apex5: { hp: 0, buffs: [""] },
-                                apex10: { hp: 0, buffs: [""] },
-                                apex15: { hp: 0, buffs: [""] },
-                                apex20: { hp: 0, buffs: [""] }
+                                base: { hp: 0 , buffs: ["No Hp Upgrades"] },
+                                apex3: { hp: 935, buffs: ["+1 Hp Upgrade - Total: 1"] },
+                                apex5: { hp: 1730, buffs: ["Warp +50, +1 Hp Upgrade - Total: 2"] },
+                                apex8: { hp: 2665, buffs: ["Warp +50, +1 Hp Upgrade - Total: 3"] },
+                                apex10: { hp: 3460, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 3, Main Wep +4 ATK, Sec Wep +14 ATK"] },
+                                apex13: { hp: 4395, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 4, Main Wep +4 ATK, Sec Wep +14 ATK"] },
+                                apex15: { hp: 5190, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 3, Main Wep +4 ATK (Total +8), Sec Wep +14 ATK (Total +28)"] },
+                                apex18: { hp: 6130, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 5, Main Wep +4 ATK (Total +8), Sec Wep +14 ATK (Total +28)"] },
+                                apex20: { hp: 7020, buffs: ["Warp +100, Cruise +20, +1 Hp Upgrade - Total: 5, Main Wep +4 ATK (Total +12), Sec Wep +14 ATK (Total +42)"] }
                             }
                         },
                         {
-                            name: "Winged Hussar B",
+                            name: "Winged Hussar B - Integrated Type",
                             data: {
-                                base: { hp: 0, buffs: [] },
-                                apex5: { hp: 0, buffs: [""] },
-                                apex10: { hp: 0, buffs: [""] },
-                                apex15: { hp: 0, buffs: [""] },
-                                apex20: { hp: 0, buffs: [""] }
+                                base: { hp: 0 , buffs: ["No Hp Upgrades"] },
+                                apex3: { hp: 935, buffs: ["+1 Hp Upgrade - Total: 1"] },
+                                apex5: { hp: 1730, buffs: ["Warp +50, +1 Hp Upgrade - Total: 2"] },
+                                apex8: { hp: 2665, buffs: ["Warp +50, +1 Hp Upgrade - Total: 3"] },
+                                apex10: { hp: 3460, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 3, Main Wep 6% for 12% crit"] },
+                                apex13: { hp: 4395, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 4, Main Wep 6% for 12% crit"] },
+                                apex15: { hp: 5190, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 3, Main Wep 6% for 12% crit (Total 12 for 24)"] },
+                                apex18: { hp: 6130, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 5, Main Wep 6% for 12% crit (Total 12 for 24)"] },
+                                apex20: { hp: 7020, buffs: ["Warp +100, Cruise +20, +1 Hp Upgrade - Total: 5, Main Wep 6% for 12% crit (Total 18 for 36)"] }
+                            }
                             }
                         },
                         {
-                            name: "Winged Hussar C",
+                            name: "Winged Hussar C - Anti-Aircraft Type",
                             data: {
-                                base: { hp: 0, buffs: [] },
-                                apex5: { hp: 0, buffs: [""] },
-                                apex10: { hp: 0, buffs: [""] },
-                                apex15: { hp: 0, buffs: [""] },
-                                apex20: { hp: 0, buffs: [""] }
+                                base: { hp: 0 , buffs: ["No Hp Upgrades"] },
+                                apex3: { hp: 935, buffs: ["+1 Hp Upgrade - Total: 1"] },
+                                apex5: { hp: 1730, buffs: ["Warp +50, +1 Hp Upgrade - Total: 2"] },
+                                apex8: { hp: 2665, buffs: ["Warp +50, +1 Hp Upgrade - Total: 3"] },
+                                apex10: { hp: 3460, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 3, Main Wep 6% for 12% crit"] },
+                                apex13: { hp: 4395, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 4, Main Wep 6% for 12% crit"] },
+                                apex15: { hp: 5190, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 3, Main Wep 6% for 12% crit (Total 12 for 24)"] },
+                                apex18: { hp: 6130, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 5, Main Wep 6% for 12% crit (Total 12 for 24)"] },
+                                apex20: { hp: 7020, buffs: ["Warp +100, Cruise +20, +1 Hp Upgrade - Total: 5, Main Wep 6% for 12% crit (Total 18 for 36)"] }
                             }
                         }
                     ]
@@ -1210,33 +1257,45 @@
                     name: "Reliat",
                     variants: [
                         {
-                            name: "Reliat A",
+                            name: "Reliat A - Anti-Ship Type",
                             data: {
-                                base: { hp: 0, buffs: [] },
-                                apex5: { hp: 0, buffs: [""] },
-                                apex10: { hp: 0, buffs: [""] },
-                                apex15: { hp: 0, buffs: [""] },
-                                apex20: { hp: 0, buffs: [""] }
+                                base: { hp: 0 , buffs: ["No Hp Upgrades"] },
+                                apex3: { hp: 430, buffs: ["+1 Hp Upgrade - Total: 1"] },
+                                apex5: { hp: 800, buffs: ["Warp +50, +1 Hp Upgrade - Total: 2"] },
+                                apex8: { hp: 1230, buffs: ["Warp +50, +1 Hp Upgrade - Total: 3"] },
+                                apex10: { hp: 1600, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 3, Main Wep +2 ATK, Sec Wep 6% for 12% crit"] },
+                                apex13: { hp: 2030, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 4, Main Wep +2 ATK, Sec Wep 6% for 12% crit"] },
+                                apex15: { hp: 2400, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 3, Main Wep +2 ATK (Total 4), Sec Wep 6% for 12% crit (Total 12 for 24)"] },
+                                apex18: { hp: 2830, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 5, Main Wep +2 ATK (Total 4), Sec Wep 6% for 12% crit (Total 12 for 24)"] },
+                                apex20: { hp: 3245, buffs: ["Warp +100, Cruise +20, +1 Hp Upgrade - Total: 5, Main Wep +2 ATK (Total 6), Sec Wep 6% for 12% crit (Total 18 for 36)"] }
                             }
                         },
                         {
-                            name: "Reliat B",
+                            name: "Reliat B - Torpedo Type",
                             data: {
-                                base: { hp: 0, buffs: [] },
-                                apex5: { hp: 0, buffs: [""] },
-                                apex10: { hp: 0, buffs: [""] },
-                                apex15: { hp: 0, buffs: [""] },
-                                apex20: { hp: 0, buffs: [""] }
+                                base: { hp: 0 , buffs: ["No Hp Upgrades"] },
+                                apex3: { hp: 430, buffs: ["+1 Hp Upgrade - Total: 1"] },
+                                apex5: { hp: 800, buffs: ["Warp +50, +1 Hp Upgrade - Total: 2"] },
+                                apex8: { hp: 1230, buffs: ["Warp +50, +1 Hp Upgrade - Total: 3"] },
+                                apex10: { hp: 1600, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 3, Main Wep +4 ATK, Sec Wep 6% for 12% crit"] },
+                                apex13: { hp: 2030, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 4, Main Wep +4 ATK, Sec Wep 6% for 12% crit"] },
+                                apex15: { hp: 2400, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 3, Main Wep +4 ATK (Total 8), Sec Wep 6% for 12% crit (Total 12 for 24)"] },
+                                apex18: { hp: 2830, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 5, Main Wep +4 ATK (Total 8), Sec Wep 6% for 12% crit (Total 12 for 24)"] },
+                                apex20: { hp: 3245, buffs: ["Warp +100, Cruise +20, +1 Hp Upgrade - Total: 5, Main Wep +4 ATK (Total 12), Sec Wep 6% for 12% crit (Total 18 for 36)"] }
                             }
                         },
                         {
-                            name: "Reliat C",
+                            name: "Reliat C - Stealth Type",
                             data: {
-                                base: { hp: 0, buffs: [] },
-                                apex5: { hp: 0, buffs: [""] },
-                                apex10: { hp: 0, buffs: [""] },
-                                apex15: { hp: 0, buffs: [""] },
-                                apex20: { hp: 0, buffs: [""] }
+                                base: { hp: 0 , buffs: ["No Hp Upgrades"] },
+                                apex3: { hp: 430, buffs: ["+1 Hp Upgrade - Total: 1"] },
+                                apex5: { hp: 800, buffs: ["Warp +50, +1 Hp Upgrade - Total: 2"] },
+                                apex8: { hp: 1230, buffs: ["Warp +50, +1 Hp Upgrade - Total: 3"] },
+                                apex10: { hp: 1600, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 3, Main Wep +1 ATK"] },
+                                apex13: { hp: 2030, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 4, Main Wep +1 ATK"] },
+                                apex15: { hp: 2400, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 3, Main Wep +1 ATK (Total 2)"] },
+                                apex18: { hp: 2830, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 5, Main Wep +1 ATK (Total 2)"] },
+                                apex20: { hp: 3245, buffs: ["Warp +100, Cruise +20, +1 Hp Upgrade - Total: 5, Main Wep +1 ATK (Total 3)"] }
                             }
                         }
                     ]
@@ -1245,33 +1304,45 @@
                     name: "Carilion",
                     variants: [
                         {
-                            name: "Carilion A",
+                            name: "Carilion A - Recon Type",
                             data: {
-                                base: { hp: 0, buffs: [] },
-                                apex5: { hp: 0, buffs: [""] },
-                                apex10: { hp: 0, buffs: [""] },
-                                apex15: { hp: 0, buffs: [""] },
-                                apex20: { hp: 0, buffs: [""] }
+                                base: { hp: 10530 , buffs: ["No Hp Upgrades"] },
+                                apex3: { hp: 340, buffs: ["+1 Hp Upgrade - Total: 1"] },
+                                apex5: { hp: 635, buffs: ["Warp +50, +1 Hp Upgrade - Total: 2"] },
+                                apex8: { hp: 975, buffs: ["Warp +50, +1 Hp Upgrade - Total: 3"] },
+                                apex10: { hp: 1270, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 3, +2% warp and +2% cruise"] },
+                                apex13: { hp: 1600, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 4, +2% warp and +2% cruise"] },
+                                apex15: { hp: 1905, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 3, +2% warp and +2% cruise (Total 4% and 4%)"] },
+                                apex18: { hp: 2245, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 5, +2% warp and +2% cruise (Total 4% and 4%)"] },
+                                apex20: { hp: 2570, buffs: ["Warp +100, Cruise +20, +1 Hp Upgrade - Total: 5, +2% warp and +2% cruise (Total 6% and 6%)"] }
                             }
                         },
                         {
-                            name: "Carilion B",
+                            name: "Carilion B - Heavy Cannon Type",
                             data: {
-                                base: { hp: 0, buffs: [] },
-                                apex5: { hp: 0, buffs: [""] },
-                                apex10: { hp: 0, buffs: [""] },
-                                apex15: { hp: 0, buffs: [""] },
-                                apex20: { hp: 0, buffs: [""] }
+                                base: { hp: 10530 , buffs: ["No Hp Upgrades"] },
+                                apex3: { hp: 340, buffs: ["+1 Hp Upgrade - Total: 1"] },
+                                apex5: { hp: 635, buffs: ["Warp +50, +1 Hp Upgrade - Total: 2"] },
+                                apex8: { hp: 975, buffs: ["Warp +50, +1 Hp Upgrade - Total: 3"] },
+                                apex10: { hp: 1270, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 3, Main Wep +10 ATK"] },
+                                apex13: { hp: 1600, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 4, Main Wep +10 ATK"] },
+                                apex15: { hp: 1905, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 3, Main Wep +10 ATK (Total 20%)"] },
+                                apex18: { hp: 2245, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 5, Main Wep +10 ATK (Total 20%)"] },
+                                apex20: { hp: 2570, buffs: ["Warp +100, Cruise +20, +1 Hp Upgrade - Total: 5, Main Wep +10 ATK (Total 30%)"] }
                             }
                         },
                         {
-                            name: "Carilion C",
+                            name: "Carilion C - Special Type",
                             data: {
-                                base: { hp: 0, buffs: [] },
-                                apex5: { hp: 0, buffs: [""] },
-                                apex10: { hp: 0, buffs: [""] },
-                                apex15: { hp: 0, buffs: [""] },
-                                apex20: { hp: 0, buffs: [""] }
+                                base: { hp: 10530 , buffs: ["No Hp Upgrades"] },
+                                apex3: { hp: 340, buffs: ["+1 Hp Upgrade - Total: 1"] },
+                                apex5: { hp: 635, buffs: ["Warp +50, +1 Hp Upgrade - Total: 2"] },
+                                apex8: { hp: 975, buffs: ["Warp +50, +1 Hp Upgrade - Total: 3"] },
+                                apex10: { hp: 1270, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 3, Main Wep +1 ATK"] },
+                                apex13: { hp: 1600, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 4, Main Wep +1 ATK"] },
+                                apex15: { hp: 1905, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 3, Main Wep +1 ATK (Total 2%)"] },
+                                apex18: { hp: 2245, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 5, Main Wep +1 ATK (Total 2%)"] },
+                                apex20: { hp: 2570, buffs: ["Warp +100, Cruise +20, +1 Hp Upgrade - Total: 5, Main Wep +1 ATK (Total 3%)"] }
                             }
                         }
                     ]
@@ -1329,31 +1400,43 @@
                         {
                             name: "XenoStinger A",
                             data: {
-                                base: { hp: 0, buffs: [] },
-                                apex5: { hp: 0, buffs: [""] },
-                                apex10: { hp: 0, buffs: [""] },
-                                apex15: { hp: 0, buffs: [""] },
-                                apex20: { hp: 0, buffs: [""] }
+                                base: { hp: 10530 , buffs: ["No Hp Upgrades"] },
+                                apex3: { hp: 435, buffs: ["+1 Hp Upgrade - Total: 1"] },
+                                apex5: { hp: 805, buffs: ["Warp +50, +1 Hp Upgrade - Total: 2"] },
+                                apex8: { hp: 1235, buffs: ["Warp +50, +1 Hp Upgrade - Total: 3"] },
+                                apex10: { hp: 1615, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 3, +4% UAV Dmg, +1 ATK Main Wep"] },
+                                apex13: { hp: 2050, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 4, +4% UAV Dmg, +1 ATK Main Wep"] },
+                                apex15: { hp: 2445, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 3, +4% UAV Dmg (Total +8%), +1 ATK Main Wep (Total +2)"] },
+                                apex18: { hp: 2860, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 5, +4% UAV Dmg (Total +8%), +1 ATK Main Wep (Total +2)"] },
+                                apex20: { hp: 3245, buffs: ["Warp +100, Cruise +20, +1 Hp Upgrade - Total: 5, +4% UAV Dmg (Total +12%), +1 ATK Main Wep (Total +3)"] }
                             }
                         },
                         {
                             name: "XenoStinger B",
                             data: {
-                                base: { hp: 0, buffs: [] },
-                                apex5: { hp: 0, buffs: [""] },
-                                apex10: { hp: 0, buffs: [""] },
-                                apex15: { hp: 0, buffs: [""] },
-                                apex20: { hp: 0, buffs: [""] }
+                                base: { hp: 10530 , buffs: ["No Hp Upgrades"] },
+                                apex3: { hp: 435, buffs: ["+1 Hp Upgrade - Total: 1"] },
+                                apex5: { hp: 805, buffs: ["Warp +50, +1 Hp Upgrade - Total: 2"] },
+                                apex8: { hp: 1235, buffs: ["Warp +50, +1 Hp Upgrade - Total: 3"] },
+                                apex10: { hp: 1615, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 3, +4% UAV Dmg, +1 ATK Main Wep"] },
+                                apex13: { hp: 2050, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 4, +4% UAV Dmg, +1 ATK Main Wep"] },
+                                apex15: { hp: 2445, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 3, +4% UAV Dmg (Total +8%), +1 ATK Main Wep (Total +2)"] },
+                                apex18: { hp: 2860, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 5, +4% UAV Dmg (Total +8%), +1 ATK Main Wep (Total +2)"] },
+                                apex20: { hp: 3245, buffs: ["Warp +100, Cruise +20, +1 Hp Upgrade - Total: 5, +4% UAV Dmg (Total +12%), +1 ATK Main Wep (Total +3)"] }
                             }
                         },
                         {
                             name: "XenoStinger C",
                             data: {
-                                base: { hp: 0, buffs: [] },
-                                apex5: { hp: 0, buffs: [""] },
-                                apex10: { hp: 0, buffs: [""] },
-                                apex15: { hp: 0, buffs: [""] },
-                                apex20: { hp: 0, buffs: [""] }
+                                base: { hp: 10530 , buffs: ["No Hp Upgrades"] },
+                                apex3: { hp: 435, buffs: ["+1 Hp Upgrade - Total: 1"] },
+                                apex5: { hp: 805, buffs: ["Warp +50, +1 Hp Upgrade - Total: 2"] },
+                                apex8: { hp: 1235, buffs: ["Warp +50, +1 Hp Upgrade - Total: 3"] },
+                                apex10: { hp: 1615, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 3, +4% UAV Efficiency, +1 ATK Main Wep"] },
+                                apex13: { hp: 2050, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 4, +4% UAV Efficiency, +1 ATK Main Wep"] },
+                                apex15: { hp: 2445, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 3, +4% UAV Efficiency (Total +8%), +1 ATK Main Wep (Total +2)"] },
+                                apex18: { hp: 2860, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 5, +4% UAV Efficiency (Total +8%), +1 ATK Main Wep (Total +2)"] },
+                                apex20: { hp: 3245, buffs: ["Warp +100, Cruise +20, +1 Hp Upgrade - Total: 5, +4% UAV Efficiency (Total +12%), +1 ATK Main Wep (Total +3)"] }
                             }
                         }
                     ]
@@ -1444,33 +1527,45 @@
                     name: "Inostrancevia",
                     variants: [
                         {
-                            name: "Inostrancevia A",
+                            name: "Inostrancevia A - Defense Type",
                             data: {
-                                base: { hp: 0, buffs: [] },
-                                apex5: { hp: 0, buffs: [""] },
-                                apex10: { hp: 0, buffs: [""] },
-                                apex15: { hp: 0, buffs: [""] },
-                                apex20: { hp: 0, buffs: [""] }
+                                base: { hp: 13400, buffs: [] },
+                                apex3: { hp: 550, buffs: ["+1 Hp Upgrade - Total: 1"] },
+                                apex5: { hp: 1020, buffs: ["Warp +50, +1 Hp Upgrade - Total: 2"] },
+                                apex8: { hp: 1570, buffs: ["Warp +50, +1 Hp Upgrade - Total: 3"] },
+                                apex10: { hp: 2040, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 3, Main Wep 6% chance for 12% crit, Sec Wep 6% chance for 12% crit"] },
+                                apex13: { hp: 2590, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 4, Main Wep 6% chance for 12% crit, Sec Wep 6% chance for 12% crit"] },
+                                apex15: { hp: 3060, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 3, Main Wep 6% chance for 12% crit (12% for 24% total), Sec Wep 6% chance for 12% crit (12% for 24% total)"] },
+                                apex18: { hp: 3610, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 5, Main Wep 6% chance for 12% crit (12% for 24% total), Sec Wep 6% chance for 12% crit (12% for 24% total)"] },
+                                apex20: { hp: 4125, buffs: ["Warp +100, Cruise +20, +1 Hp Upgrade - Total: 5, Main Wep 6% chance for 12% crit (18% for 36% total), Sec Wep 6% chance for 12% crit (18% for 36% total)"] }
                             }
                         },
                         {
-                            name: "Inostrancevia B",
+                            name: "Inostrancevia B - Offensive Type",
                             data: {
-                                base: { hp: 0, buffs: [] },
-                                apex5: { hp: 0, buffs: [""] },
-                                apex10: { hp: 0, buffs: [""] },
-                                apex15: { hp: 0, buffs: [""] },
-                                apex20: { hp: 0, buffs: [""] }
+                                base: { hp: 13400, buffs: [] },
+                                apex3: { hp: 550, buffs: ["+1 Hp Upgrade - Total: 1"] },
+                                apex5: { hp: 1020, buffs: ["Warp +50, +1 Hp Upgrade - Total: 2"] },
+                                apex8: { hp: 1570, buffs: ["Warp +50, +1 Hp Upgrade - Total: 3"] },
+                                apex10: { hp: 2040, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 3, Main Wep 6% chance for 12% crit, Sec Wep 6% chance for 12% crit"] },
+                                apex13: { hp: 2590, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 4, Main Wep 6% chance for 12% crit, Sec Wep 6% chance for 12% crit"] },
+                                apex15: { hp: 3060, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 3, Main Wep 6% chance for 12% crit (12% for 24% total), Sec Wep 6% chance for 12% crit (12% for 24% total)"] },
+                                apex18: { hp: 3610, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 5, Main Wep 6% chance for 12% crit (12% for 24% total), Sec Wep 6% chance for 12% crit (12% for 24% total)"] },
+                                apex20: { hp: 4125, buffs: ["Warp +100, Cruise +20, +1 Hp Upgrade - Total: 5, Main Wep 6% chance for 12% crit (18% for 36% total), Sec Wep 6% chance for 12% crit (18% for 36% total)"] }
                             }
                         },
                         {
-                            name: "Inostrancevia C",
+                            name: "Inostrancevia C - Special Type",
                             data: {
-                                base: { hp: 0, buffs: [] },
-                                apex5: { hp: 0, buffs: [""] },
-                                apex10: { hp: 0, buffs: [""] },
-                                apex15: { hp: 0, buffs: [""] },
-                                apex20: { hp: 0, buffs: [""] }
+                                base: { hp: 13400, buffs: [] },
+                                apex3: { hp: 550, buffs: ["+1 Hp Upgrade - Total: 1"] },
+                                apex5: { hp: 1020, buffs: ["Warp +50, +1 Hp Upgrade - Total: 2"] },
+                                apex8: { hp: 1570, buffs: ["Warp +50, +1 Hp Upgrade - Total: 3"] },
+                                apex10: { hp: 2040, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 3, Main Wep 6% chance for 12% crit, Sec Wep 6% chance for 12% crit"] },
+                                apex13: { hp: 2590, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 4, Main Wep 6% chance for 12% crit, Sec Wep 6% chance for 12% crit"] },
+                                apex15: { hp: 3060, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 3, Main Wep 6% chance for 12% crit (12% for 24% total), Sec Wep 6% chance for 12% crit (12% for 24% total)"] },
+                                apex18: { hp: 3610, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 5, Main Wep 6% chance for 12% crit (12% for 24% total), Sec Wep 6% chance for 12% crit (12% for 24% total)"] },
+                                apex20: { hp: 4125, buffs: ["Warp +100, Cruise +20, +1 Hp Upgrade - Total: 5, Main Wep 6% chance for 12% crit (18% for 36% total), Sec Wep 6% chance for 12% crit (18% for 36% total)"] }
                             }
                         }
                     ]
@@ -1633,21 +1728,25 @@
                                 apex3: { hp: 505, buffs: ["+1 Hp Upgrade - Total: 1"] },
                                 apex5: { hp: 845, buffs: ["Warp +50, +1 Hp Upgrade - Total: 2"] },
                                 apex8: { hp: 1350, buffs: ["Warp +50, +1 Hp Upgrade - Total: 3"] },
-                                apex10: { hp: 1690, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 3, Main Wep Dmg +2%, Sec Wep 9% for 15% crit"] },
-                                apex13: { hp: 2195, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 4, Main Wep Dmg +2%, Sec Wep 9% for 15% crit"] },
-                                apex15: { hp: 2530, buffs: ["Warp +100, Cruise +10, +1 Hp Upgrade - Total: 3, Main Wep Dmg +2% (Total 4%), Sec Wep 9% for 15% crit (Total 18 for 30)"] },
-                                apex18: { hp: 3040, buffs: ["Warp +100, Cruise +10, +1 Hp Upgrade - Total: 5, Main Wep Dmg +2% (Total 4%), Sec Wep 9% for 15% crit (Total 18 for 30)"] },
-                                apex20: { hp: 3375, buffs: ["Warp +100, Cruise +20, +1 Hp Upgrade - Total: 5, Main Wep Dmg +2% (Total 6%), Sec Wep 9% for 15% crit (Total 27 for 45)"] }
+                                apex10: { hp: 1690, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 3, UAV Dmg +4%, Sec Wep 9% for 15% crit"] },
+                                apex13: { hp: 2195, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 4, UAV Dmg +4%, Sec Wep 9% for 15% crit"] },
+                                apex15: { hp: 2530, buffs: ["Warp +100, Cruise +10, +1 Hp Upgrade - Total: 3, UAV Dmg +4% (Total 8%), Sec Wep 9% for 15% crit (Total 18 for 30)"] },
+                                apex18: { hp: 3040, buffs: ["Warp +100, Cruise +10, +1 Hp Upgrade - Total: 5, UAV Dmg +4% (Total 8%), Sec Wep 9% for 15% crit (Total 18 for 30)"] },
+                                apex20: { hp: 3375, buffs: ["Warp +100, Cruise +20, +1 Hp Upgrade - Total: 5, UAV Dmg +4% (Total 12%), Sec Wep 9% for 15% crit (Total 27 for 45)"] }
                             }
                         },
                         {
                             name: "Zircon B - Special Type",
                             data: {
-                                base: { hp: 0, buffs: ["Needs information, does not follow traditional apex patterns."] },
-                                apex5: { hp: 0, buffs: [""] },
-                                apex10: { hp: 0, buffs: [""] },
-                                apex15: { hp: 0, buffs: [""] },
-                                apex20: { hp: 0, buffs: [""] }
+                                base: { hp: 13400 , buffs: ["No Hp Upgrades - Secondary weapon upgrades may be at incorrect stages."] },
+                                apex3: { hp: 505, buffs: ["+1 Hp Upgrade - Total: 1"] },
+                                apex5: { hp: 845, buffs: ["Warp +50, +1 Hp Upgrade - Total: 2"] },
+                                apex8: { hp: 1350, buffs: ["Warp +50, +1 Hp Upgrade - Total: 3"] },
+                                apex10: { hp: 1690, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 3, UAV Dmg +4%, Sec Wep +20 ATK"] },
+                                apex13: { hp: 2195, buffs: ["Warp +50, Cruise +10, +1 Hp Upgrade - Total: 4, UAV Dmg +4%, Sec Wep +20 ATK"] },
+                                apex15: { hp: 2530, buffs: ["Warp +100, Cruise +10, +1 Hp Upgrade - Total: 3, UAV Dmg +4% (Total 8%), Sec Wep +20 ATK (Total 40)"] },
+                                apex18: { hp: 3040, buffs: ["Warp +100, Cruise +10, +1 Hp Upgrade - Total: 5, UAV Dmg +4% (Total 8%), Sec Wep +20 ATK (Total 40)"] },
+                                apex20: { hp: 4125, buffs: ["Warp +100, Cruise +20, +1 Hp Upgrade - Total: 5, UAV Dmg +4% (Total 12%), Sec Wep +20 ATK (Total 60)"] }
                             }
                         }
                     ]
